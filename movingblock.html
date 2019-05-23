@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>cArleone</title>
+ <link type="text/css" rel="stylesheet" href="movingblock.css">
+</head>
+<body>
+
+  <table>
+    
+  </table>
+
+<div id="container"> <div id="guy"></div> </div>
+<script type="text/javascript">
+
+var guy = document.getElementById("guy");
+var container = document.getElementById("container");
+var guyLeft = 0;
+var y = 0;
+
+function anim(e) {
+if (e.keyCode == 39) {
+guyLeft += 2;
+guy.style.left = guyLeft + "px";
+  if(guyLeft <=0){
+    guyLeft +=2;
+  }
+}
+
+else if (e.keyCode == 37) {
+guyLeft -= 2; guy.style.left = guyLeft + "px";
+}
+else if (e.keyCode == 40) {
+y += 2; guy.style.top = y + "px";
+}
+else if (e.keyCode == 38) {
+y -= 2; guy.style.top = y + "px";
+}
+
+} document.onkeydown = anim;
+
+</script>
+<BR><BR>
+
+</body>
+</html>﻿

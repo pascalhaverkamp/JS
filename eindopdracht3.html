@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link type="text/css" rel="stylesheet" href="eindopdracht3.css">
+    <meta charset="utf-8">
+    <title>aaaa</title>
+    <script  type='text/javascript'>
+    function inputText_To_hok1() {
+
+      document.getElementById('hok1').innerHTML = document.getElementById('inputText').value+"<br>"+ document.getElementById('hok1').innerHTML;
+
+    }sdfs
+
+   function hok1_To_hok2() {
+     document.getElementById('hok2').innerHTML = document.getElementById('hok1').innerHTML;
+     document.getElementById('hok1').innerHTML = "";
+   }
+
+   function hok2_To_hok1() {
+     document.getElementById('hok1').innerHTML = document.getElementById('hok2').innerHTML;
+     document.getElementById('hok2').innerHTML = "";
+   }
+
+    </script>
+  </head>
+  <body>
+    <!-- ................................................................. -->
+    <form method='post'>
+    <h1> naam invoeren:</h1>
+    <input type="text" name="text" id="inputText" value=""/>
+    </form>
+<!-- ......................................................................... -->
+      <div id="hok1" class="hokken">
+    </div>
+    <!-- .................................................... -->
+      <div id="hok2" class="hokken">
+    </div>
+<!-- //............................................................... -->
+    <div id="tab1" class="tabs">
+    <button onclick="hok1_To_hok2();">>>>>></button>
+</div>
+<!-- ................................................................. -->
+  <div id="tab2" class="tabs">
+    <button onclick="hok2_To_hok1();"><<<<<</button>
+  </div>
+<!-- .................................................................... -->
+    <div id="knop" class="toegevoegd">
+      <button onclick="inputText_To_hok1();">toevoegen</button>
+    </div>
+<!-- .................................................. -->
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="position"></p>
+    <p id="search"></p>
+    <p id="slice"></p>
+    <p id="replace"></p>
+    <p id="hoofdletters"></p>
+    <script type="text/javascript">
+      var zin = "applicatie ontwikkelaar";
+      document.getElementById('id')
+      document.getElementById('demo').innerHTML="A) de lengte van \"applicatie ontwikkelaar\" is: "+ zin.length;
+      document.getElementById('position').innerHTML="B) het woord\"ontwikkelaar\" staat op de plek:"+zin.indexOf('ontwikkelaar');
+      document.getElementById('search').innerHTML=("C) ")+zin.search("wikkelaar");
+      document.getElementById('slice').innerHTML=("D) ")+zin.slice(14,17);
+      document.getElementById('replace').innerHTML=("E) ")+zin.replace("ontwikkelaar","programmeur");
+      document.getElementById('hoofdletters').innerHTML=("F) ")+zin.toUpperCase();
+
+    </script>
+
+  </body>
+</html>

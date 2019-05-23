@@ -1,0 +1,36 @@
+#hok1 {
+  width: 200px;
+  height: 300px;
+  border: solid black;
+  float: left;
+  margin-left: 400px;
+}
+
+#hok2 {
+  width: 200px;
+  height: 300px;
+  border: solid black;
+  float: right;
+  margin-right: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-right: 500px;
+}
+
+#inputText {
+  margin-left: 650px;
+  border: 3px solid gray;
+  float: top;
+  margin-top: -200px;
+}
+
+#tab1 {
+  float: left;
+}
+
+#tab2 {
+  float: right;
+  margin-top: 200px;
+}
