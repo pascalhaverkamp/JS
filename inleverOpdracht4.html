@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link type="text/css" rel="stylesheet" href="inleverOpdracht4.css">
     <style media="screen">
       .link{
         float: right;
@@ -31,8 +32,25 @@
     </div>
     <div <div style="display: inline-block;">
       <form action="inleverOpdracht4.html">
+    <div id="man2">
         <input type="radio" name="geslacht" value="Heer"> Heer
-        <input type="radio" name="geslacht" value="Mevrouw"> Mevrouw<br><br>
+        <button type="button" onclick="myFunction()"></button>
+        <script>
+          function myFunction() {
+              document.body.style.backgroundColor = "darkgreen";
+            }
+        </script>
+    </div>
+
+    <div id="vrouw2">
+        <input type="radio" name="geslacht" value="Mevrouw"> Mevrouw
+        <button type="button" onclick="myFunction()"></button>
+        <script>
+          function myFunction() {
+              document.body.style.backgroundColor = "purple";
+            }
+          </script>
+    </div>
       <input type="text" name="Naam" value=""><br><br>
       <input type="text" name="Achternaam" value=""><br><br>
       <input type="text" name="Adres" value=""><br><br>
