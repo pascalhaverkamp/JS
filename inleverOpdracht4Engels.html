@@ -18,6 +18,26 @@
     </style>
   </head>
   <body>
+
+    <form action="inleverOpdracht4Engels.html" method="post">
+
+
+
+      <input type="radio" id="vrouw" name="geslacht" value="Mevrouw" onclick="myFunction('vrouw')"> Madam
+      <input type="radio" id="man" name="geslacht" value="Man" onclick="myFunction('man')"> Sir
+    </form>
+
+      <script language=javascript>
+        function myFunction(waarde) {
+          if(waarde == "vrouw")
+          {
+            document.body.style.backgroundColor = "purple";
+          } else {
+            document.body.style.backgroundColor = "darkgreen";
+          }
+        }
+     </script>
+
     <a class="link" href="inleverOpdracht4.html">Nederland</a>
     <div style="display: inline-block;float:left;font-size:18px;">
       <br>
@@ -32,12 +52,9 @@
     </div>
     <div <div style="display: inline-block;">
       <form action="inleverOpdracht4Engels.html">
-    <div id="man">
-        <input type="radio" name="geslacht" value="Heer"> Sir
     </div>
-    <div id="vrouw">
-      <input type="radio" name="geslacht" value="Mevrouw"> Madam<br><br>
-    </div>
+
+    <br><br>
       <input type="text" name="voornaam" value=""><br><br>
       <input type="text" name="Achternaam" value=""><br><br>
       <input type="text" name="Adres" value=""><br><br>
@@ -47,6 +64,5 @@
       <input type="text" name="Nationaliteit" value=""><br><br>
       <input type="text" name="Beroep" value=""><br><br>
       </form>
-    </div>
   </body>
 </html>

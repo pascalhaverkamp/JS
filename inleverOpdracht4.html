@@ -30,27 +30,37 @@
       <p>Nationaliteit:</p>
       <p>Beroep:</p>
     </div>
-    <div <div style="display: inline-block;">
-      <form action="inleverOpdracht4.html">
-    <div id="man2">
-        <input type="radio" name="geslacht" value="Heer"> Heer
-        <button type="button" onclick="myFunction()"></button>
-        <script>
-          function myFunction() {
-              document.body.style.backgroundColor = "darkgreen";
-            }
-        </script>
-    </div>
 
-    <div id="vrouw2">
-        <input type="radio" name="geslacht" value="Mevrouw"> Mevrouw
-        <button type="button" onclick="myFunction()"></button>
-        <script>
-          function myFunction() {
-              document.body.style.backgroundColor = "purple";
+
+    <div <div style="display: inline-block;">
+
+
+
+        <form action="inleverOpdracht4.html" method="post">
+
+
+
+          <input type="radio" id="vrouw" name="geslacht" value="Mevrouw" onclick="myFunction('vrouw')"> Mevrouw
+          <input type="radio" id="man" name="geslacht" value="Man" onclick="myFunction('man')"> heer
+        </form>
+
+
+          <script language=javascript>
+            function myFunction(waarde) {
+              if(waarde == "vrouw")
+              {
+                document.body.style.backgroundColor = "purple";
+              } else {
+                document.body.style.backgroundColor = "darkgreen";
+              }
             }
-          </script>
-    </div>
+         </script>
+
+
+    <!-- <div id="man2" class="toegevoegd">
+      <button onclick="change_Background_To_Darkgreen(darkgreen);">Heer</button>
+    </div> -->
+<br><br>
       <input type="text" name="Naam" value=""><br><br>
       <input type="text" name="Achternaam" value=""><br><br>
       <input type="text" name="Adres" value=""><br><br>
