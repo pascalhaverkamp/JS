@@ -16,13 +16,50 @@
         font-size: 25px;
       }
     </style>
+
+      <script type="text/jscript">
+var nedvelden = ["divfield1:","Adres:","Woonplaats:","Postcode:","Geboortedatum:","Nationaliteit:","Beroep:","Opmerkingen:"];
+
+      $("#nedbutton").click(function(){
+   var name = $("#divfield1").val();
+   var adres = $("#Adres").val();
+   var plaats = $("#Woonplaats").val();
+   var postcode = $("#Postcode").val();
+   var geboortedatum = $("#Geboortedatum").val();
+   var nationaliteit = $("#Nationaliteit").val();
+   var beroep = $("#Beroep").val();
+   if(!/^\D*$/.test(Naam)){
+     alert("Naam is niet correct");
+   }
+   if(!/^[a-zA-Z$]*\s[1-9]*$/.test(Adres)){
+     alert("Adres is niet correct");
+   }
+   if(!/^[a-zA-z]*$/.test(Woonplaats)){
+     alert("Plaats is niet correct");
+   }
+   if(!/^[0-9]{4}\s[a-zA-Z]{2}$/.test(Postcode)){
+     alert("Postcode is niet correct");
+   }
+   if(/^\d{4}-\d{2}-\d{2}$/.test(Geboortedatum)){
+     let age = getAge(Geboortedatum);
+     $("#oud").text("Je word " + (age+=1) + " jaar oud");
+     $("#oud").fadeIn("slow");
+   }
+   if(!/^\D*$/.testnnationaliteit)){
+     alert("Nationaliteit is niet correct");
+   }
+   if(!/^\D*$/.test(Beroep)){
+     alert("Beroep is niet correct");
+   }
+ });
+      </script>
+
   </head>
   <body>
     <a class="link" href="inleverOpdracht4Engels.html">Engels</a>
     <div style="display: inline-block;float:left;font-size:18px;">
       <br>
-      <p>Voornaam:</p>
-      <p>Achternaam:</p>
+      <p>Naam:</p>
       <p>adres:</p>
       <p style="margin-top:25px;">Woonplaats:</p>
       <p>  Postcode:</p>
@@ -31,44 +68,49 @@
       <p>Beroep:</p>
     </div>
 
-
-    <div <div style="display: inline-block;">
-
-
-
         <form action="inleverOpdracht4.html" method="post">
-
-
 
           <input type="radio" id="vrouw" name="geslacht" value="Mevrouw" onclick="myFunction('vrouw')"> Mevrouw
           <input type="radio" id="man" name="geslacht" value="Man" onclick="myFunction('man')"> heer
         </form>
 
 
-          <script language=javascript>
-            function myFunction(waarde) {
-              if(waarde == "vrouw")
-              {
-                document.body.style.backgroundColor = "purple";
-              } else {
-                document.body.style.backgroundColor = "darkgreen";
-              }
+        <script language=javascript>
+          function myFunction(waarde) {
+            if(waarde == "vrouw")
+            {
+              document.body.style.backgroundColor = "purple";
+              document.getElementById('divfield1').style.backgroundColor = "pink";
+              document.getElementById('divfield2').style.backgroundColor = "pink";
+              document.getElementById('divfield3').style.backgroundColor = "pink";
+              document.getElementById('divfield4').style.backgroundColor = "pink";
+              document.getElementById('divfield5').style.backgroundColor = "pink";
+              document.getElementById('divfield6').style.backgroundColor = "pink";
+              document.getElementById('divfield7').style.backgroundColor = "pink";
+
+            } else {
+              document.body.style.backgroundColor = "darkgreen";
+              document.getElementById('divfield1').style.backgroundColor = "lightgreen";
+              document.getElementById('divfield2').style.backgroundColor = "lightgreen";
+              document.getElementById('divfield3').style.backgroundColor = "lightgreen";
+              document.getElementById('divfield4').style.backgroundColor = "lightgreen";
+              document.getElementById('divfield5').style.backgroundColor = "lightgreen";
+              document.getElementById('divfield6').style.backgroundColor = "lightgreen";
+              document.getElementById('divfield7').style.backgroundColor = "lightgreen";
+
             }
-         </script>
+          }
+       </script>
 
-
-    <!-- <div id="man2" class="toegevoegd">
-      <button onclick="change_Background_To_Darkgreen(darkgreen);">Heer</button>
-    </div> -->
-<br><br>
-      <input type="text" name="Naam" value=""><br><br>
-      <input type="text" name="Achternaam" value=""><br><br>
-      <input type="text" name="Adres" value=""><br><br>
-      <input type="text" name="Woonplaats" value=""><br><br>
-      <input type="text" name="Postcode" value=""><br><br>
-      <input type="text" name="Geboortedatum" value=""><br><br>
-      <input type="text" name="Nationaliteit" value=""><br><br>
-      <input type="text" name="Beroep" value=""><br><br>
+<br>
+      <div value="tekstveld">
+      <input id="divfield1" type="text" name="Naam" value=""><br><br>
+      <input id="divfield2" type="text" name="Adres" value=""><br><br>
+      <input id="divfield3" type="text" name="Woonplaats" value=""><br><br>
+      <input id="divfield4" type="text" name="Postcode" value=""><br><br>
+      <input id="divfield5" type="text" name="Geboortedatum" value=""><br><br>
+      <input id="divfield6" type="text" name="Nationaliteit" value=""><br><br>
+      <input id="divfield7" type="text" name="Beroep" value=""><br><br>
     </div>
     </form>
   </body>
