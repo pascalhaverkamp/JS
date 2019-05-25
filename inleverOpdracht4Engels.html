@@ -16,20 +16,7 @@
         font-size: 25px;
       }
     </style>
-
-   <script type="text/javascript">
-    function getAge(dateString) {
-        var today = new Date();
-        var birthDate = new Date(dateString);
-        var age = today.getFullYear() - birthDate.getFullYear();
-        var month = today.getMonth() - birthDate.getMonth();
-        if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-        return age;
-    }
-    </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -46,38 +33,27 @@
           if(waarde == "vrouw")
           {
             document.body.style.backgroundColor = "purple";
-            document.getElementById('divfield1').style.backgroundColor = "pink";
-            document.getElementById('divfield2').style.backgroundColor = "pink";
-            document.getElementById('divfield3').style.backgroundColor = "pink";
-            document.getElementById('divfield4').style.backgroundColor = "pink";
-            document.getElementById('divfield5').style.backgroundColor = "pink";
-            document.getElementById('divfield6').style.backgroundColor = "pink";
-            document.getElementById('divfield7').style.backgroundColor = "pink";
+            document.getElementById('divfield8').style.backgroundColor = "pink";
+            document.getElementById('divfield9').style.backgroundColor = "pink";
+            document.getElementById('divfield10').style.backgroundColor = "pink";
+            document.getElementById('divfield11').style.backgroundColor = "pink";
+            document.getElementById('divfield12').style.backgroundColor = "pink";
+            document.getElementById('divfield13').style.backgroundColor = "pink";
+            document.getElementById('divfield14').style.backgroundColor = "pink";
 
           } else {
             document.body.style.backgroundColor = "darkgreen";
-            document.getElementById('divfield1').style.backgroundColor = "lightgreen";
-            document.getElementById('divfield2').style.backgroundColor = "lightgreen";
-            document.getElementById('divfield3').style.backgroundColor = "lightgreen";
-            document.getElementById('divfield4').style.backgroundColor = "lightgreen";
-            document.getElementById('divfield5').style.backgroundColor = "lightgreen";
-            document.getElementById('divfield6').style.backgroundColor = "lightgreen";
-            document.getElementById('divfield7').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield8').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield9').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield10').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield11').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield12').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield13').style.backgroundColor = "lightgreen";
+            document.getElementById('divfield14').style.backgroundColor = "lightgreen";
 
           }
         }
      </script>
-
-     <!-- <script language=javascript>
-      function myFunction(waarde) {
-        if(waarde == "tekstvelden")
-        {
-          document.input.style.Color = "pink";
-        } else {
-          document.input.style.Color = "lightgreen";
-        }
-      }
-     </script> -->
 
     <a class="link" href="inleverOpdracht4.html">Nederland</a>
 
@@ -97,14 +73,16 @@
 
     <br><br>
     <div value="tekstveld">
-      <input id="divfield1" type="text" name="voornaam" value=""><br><br>
-      <input id="divfield2" type="text" name="Adres" value=""><br><br>
-      <input id="divfield3" type="text" name="Woonplaats" value=""><br><br>
-      <input id="divfield4" type="text" name="Postcode" value=""><br><br>
-      <input id="divfield5" type="text" name="Geboortedatum" value=""><br><br>
-      <input id="divfield6" type="text" name="Nationaliteit" value=""><br><br>
-      <input id="divfield7" type="text" name="Beroep" value=""><br><br>
+      <input id="divfield8" type="text" name="Naam" value=""><br><br>
+      <input id="divfield9" type="text" name="Adres" value=""><br><br>
+      <input id="divfield10" type="text" name="Woonplaats" value=""><br><br>
+      <input id="divfield11" type="text" name="Postcode" value=""><br><br>
+      <input id="divfield12" type="text" name="Geboortedatum" value=""><br><br>
+      <input id="divfield13" type="text" name="Nationaliteit" value=""><br><br>
+      <input id="divfield14" type="text" name="Beroep" value=""><br><br>
     </div>
+   <input class="engbutton" type="submit" value="Submit"></button>
       </form>
   </body>
+<script src="../scripts/tussenopdrachten/inleverOpdracht4.js"></script>
 </html>

@@ -16,44 +16,7 @@
         font-size: 25px;
       }
     </style>
-
-      <script type="text/jscript">
-var nedvelden = ["divfield1:","Adres:","Woonplaats:","Postcode:","Geboortedatum:","Nationaliteit:","Beroep:","Opmerkingen:"];
-
-      $("#nedbutton").click(function(){
-   var name = $("#divfield1").val();
-   var adres = $("#Adres").val();
-   var plaats = $("#Woonplaats").val();
-   var postcode = $("#Postcode").val();
-   var geboortedatum = $("#Geboortedatum").val();
-   var nationaliteit = $("#Nationaliteit").val();
-   var beroep = $("#Beroep").val();
-   if(!/^\D*$/.test(Naam)){
-     alert("Naam is niet correct");
-   }
-   if(!/^[a-zA-Z$]*\s[1-9]*$/.test(Adres)){
-     alert("Adres is niet correct");
-   }
-   if(!/^[a-zA-z]*$/.test(Woonplaats)){
-     alert("Plaats is niet correct");
-   }
-   if(!/^[0-9]{4}\s[a-zA-Z]{2}$/.test(Postcode)){
-     alert("Postcode is niet correct");
-   }
-   if(/^\d{4}-\d{2}-\d{2}$/.test(Geboortedatum)){
-     let age = getAge(Geboortedatum);
-     $("#oud").text("Je word " + (age+=1) + " jaar oud");
-     $("#oud").fadeIn("slow");
-   }
-   if(!/^\D*$/.testnnationaliteit)){
-     alert("Nationaliteit is niet correct");
-   }
-   if(!/^\D*$/.test(Beroep)){
-     alert("Beroep is niet correct");
-   }
- });
-      </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <a class="link" href="inleverOpdracht4Engels.html">Engels</a>
@@ -112,6 +75,9 @@ var nedvelden = ["divfield1:","Adres:","Woonplaats:","Postcode:","Geboortedatum:
       <input id="divfield6" type="text" name="Nationaliteit" value=""><br><br>
       <input id="divfield7" type="text" name="Beroep" value=""><br><br>
     </div>
+    <input class="nedbutton" type="submit" value="Submit"></button>
+
     </form>
   </body>
+    <script src="../scripts/tussenopdrachten/inleverOpdracht4.js"></script>
 </html>
