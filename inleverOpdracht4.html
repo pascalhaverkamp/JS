@@ -16,67 +16,62 @@
         font-size: 25px;
       }
     </style>
+
+    <script language=javascript>
+      function myFunction(waarde) {
+        if(waarde == "vrouw")
+        {
+          document.body.style.backgroundColor = "purple";
+          document.getElementById('divfield1').style.backgroundColor = "pink";
+          document.getElementById('divfield2').style.backgroundColor = "pink";
+          document.getElementById('divfield3').style.backgroundColor = "pink";
+          document.getElementById('divfield4').style.backgroundColor = "pink";
+          document.getElementById('divfield5').style.backgroundColor = "pink";
+          document.getElementById('divfield6').style.backgroundColor = "pink";
+          document.getElementById('divfield7').style.backgroundColor = "pink";
+
+        } else {
+          document.body.style.backgroundColor = "darkgreen";
+          document.getElementById('divfield1').style.backgroundColor = "lightgreen";
+          document.getElementById('divfield2').style.backgroundColor = "lightgreen";
+          document.getElementById('divfield3').style.backgroundColor = "lightgreen";
+          document.getElementById('divfield4').style.backgroundColor = "lightgreen";
+          document.getElementById('divfield5').style.backgroundColor = "lightgreen";
+          document.getElementById('divfield6').style.backgroundColor = "lightgreen";
+          document.getElementById('divfield7').style.backgroundColor = "lightgreen";
+
+        }
+      }
+      </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <a class="link" href="inleverOpdracht4Engels.html">Engels</a>
-    <div style="display: inline-block;float:left;font-size:18px;">
-      <br>
-      <p>Naam:</p>
-      <p>adres:</p>
-      <p style="margin-top:25px;">Woonplaats:</p>
-      <p>  Postcode:</p>
-      <p>Geboortedatum:&nbsp;</p>
-      <p>Nationaliteit:</p>
-      <p>Beroep:</p>
-    </div>
-
-        <form action="inleverOpdracht4.html" method="post">
+    <form action="inleverOpdracht4.html" method="post">
 
           <input type="radio" id="vrouw" name="geslacht" value="Mevrouw" onclick="myFunction('vrouw')"> Mevrouw
           <input type="radio" id="man" name="geslacht" value="Man" onclick="myFunction('man')"> heer
-        </form>
 
+        <br>
+        <div style="display: inline-block;float:left;font-size:18px;">
+          <br>
+          Naam: <br>
+         <input id="divfield1" type="text" name="Naam" value=""><br><br>
+          adres: <br>
+          <input id="divfield2" type="text" name="Adres" value=""><br><br>
+          Woonplaats: <br>
+          <input id="divfield3" type="text" name="Woonplaats" value=""><br><br>
+          Postcode:    <br>
+          <input id="divfield4" type="text" name="Postcode" value=""><br><br>
+          Geboortedatum: <br>
+          <input id="divfield5" type="text" name="Geboortedatum" value=""><br><br>
+          Nationaliteit: <br>
+          <input id="divfield6" type="text" name="Nationaliteit" value=""><br><br>
+          Beroep:   <br>
+           <input id="divfield7" type="text" name="Beroep" value=""><br><br>
 
-        <script language=javascript>
-          function myFunction(waarde) {
-            if(waarde == "vrouw")
-            {
-              document.body.style.backgroundColor = "purple";
-              document.getElementById('divfield1').style.backgroundColor = "pink";
-              document.getElementById('divfield2').style.backgroundColor = "pink";
-              document.getElementById('divfield3').style.backgroundColor = "pink";
-              document.getElementById('divfield4').style.backgroundColor = "pink";
-              document.getElementById('divfield5').style.backgroundColor = "pink";
-              document.getElementById('divfield6').style.backgroundColor = "pink";
-              document.getElementById('divfield7').style.backgroundColor = "pink";
-
-            } else {
-              document.body.style.backgroundColor = "darkgreen";
-              document.getElementById('divfield1').style.backgroundColor = "lightgreen";
-              document.getElementById('divfield2').style.backgroundColor = "lightgreen";
-              document.getElementById('divfield3').style.backgroundColor = "lightgreen";
-              document.getElementById('divfield4').style.backgroundColor = "lightgreen";
-              document.getElementById('divfield5').style.backgroundColor = "lightgreen";
-              document.getElementById('divfield6').style.backgroundColor = "lightgreen";
-              document.getElementById('divfield7').style.backgroundColor = "lightgreen";
-
-            }
-          }
-       </script>
-
-<br>
-      <div value="tekstveld">
-      <input id="divfield1" type="text" name="Naam" value=""><br><br>
-      <input id="divfield2" type="text" name="Adres" value=""><br><br>
-      <input id="divfield3" type="text" name="Woonplaats" value=""><br><br>
-      <input id="divfield4" type="text" name="Postcode" value=""><br><br>
-      <input id="divfield5" type="text" name="Geboortedatum" value=""><br><br>
-      <input id="divfield6" type="text" name="Nationaliteit" value=""><br><br>
-      <input id="divfield7" type="text" name="Beroep" value=""><br><br>
-    </div>
-    <input class="nedbutton" type="submit" value="Submit"></button>
-
+        </div>
     </form>
   </body>
     <script src="../scripts/tussenopdrachten/inleverOpdracht4.js"></script>

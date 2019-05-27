@@ -20,6 +20,7 @@ $(document).ready(function(){
     var geboortedatum = $("#divfield5").val();
     var nationaliteit = $("#divfield6").val();
     var beroep = $("#divfield7").val();
+    
     if(!/^\D*$/.test(name)){
       alert("Naam is niet correct");
     }
