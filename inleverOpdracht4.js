@@ -1,82 +1,145 @@
 var nedvelden = ["Naam:","Adres:","Woonplaats:","Postcode:","Geboortedatum:","Nationaliteit:","Beroep:"];
-var engvelden = ["Naam:","Adres:","Woonplaats:","Postcode:","Geboortedatum:","Nationaliteit:","Beroep:"];
+var engvelden = ["Name:","Address:","Residence:","Postcode:","Date of Birth:","Nationality:","Work:",];
 //Formule leeftijdberekening
-function getAge(dateString) {
-    var today = new Date();
-    var birthDate = new Date(dateString);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var month = today.getMonth() - birthDate.getMonth();
-    if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    return age;
-}
+// function getAge(dateString) {
+//     var today = new Date();
+//     var birthDate = new Date(dateString);
+//     var age = today.getFullYear() - birthDate.getFullYear();
+//     var month = today.getMonth() - birthDate.getMonth();
+//     if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate())) {
+//         age--;
+//     }
+//     return age;
+// }
+
 $(document).ready(function(){
-  $("#nedbutton").click(function(){
-    var Naam = $("#divfield1").val();
-    var adres = $("#divfield2").val();
-    var plaats = $("#divfield3").val();
-    var postcode = $("#divfield4").val();
-    var geboortedatum = $("#divfield5").val();
-    var nationaliteit = $("#divfield6").val();
-    var beroep = $("#divfield7").val();
-    
-    if(!/^\D*$/.test(name)){
-      alert("Naam is niet correct");
-    }
-    if(!/^[a-zA-Z$]*\s[1-9]*$/.test(adres)){
-      alert("Adres is niet correct");
-    }
-    if(!/^[a-zA-z]*$/.test(plaats)){
-      alert("Plaats is niet correct");
-    }
-    if(!/^[0-9]{4}\s[a-zA-Z]{2}$/.test(postcode)){
-      alert("Postcode is niet correct");
-    }
-    if(/^\d{4}-\d{2}-\d{2}$/.test(geboortedatum)){
-      let age = getAge(geboortedatum);
-      $("#oud").text("Je word " + (age+=1) + " jaar oud");
-      $("#oud").fadeIn("slow");
-    }
-    if(!/^\D*$/.test(nationaliteit)){
-      alert("Nationaliteit is niet correct");
-    }
-    if(!/^\D*$/.test(beroep)){
-      alert("Beroep is niet correct");
-    }
-  });
-  $("#engbutton").click(function(){
-    var engname = $("#divfield8").val();
-    var engadres = $("#divfield9").val();
-    var engplaats = $("#divfield10").val();
-    var engpostcode = $("#divfield11").val();
-    var enggeboortedatum = $("#divfield12").val();
-    var engnationaliteit = $("#divfield13").val();
-    var engberoep = $("#divfield14").val();
-    if(!/^\D*$/.test(divfield1)){
-      alert("Name is not correct");
-    }
-    if(!/^[a-zA-Z$]*\s[1-9]*$/.test(divfield2)){
-      alert("Address is not correct");
-    }
-    if(!/^[a-zA-z]*$/.test(divfield3)){
-      alert("Residence is not correct");
-    }
-    if(!/^[0-9]{4}\s[a-zA-Z]{2}$/.test(divfield4)){
-      alert("Postcode is not correct");
-    }
-    if(/^\d{4}-\d{2}-\d{2}$/.test(divfield5)){
-      let age = getAge(divfield5);
-      $("#engoud").text("Je word " + (age+=1) + " jaar oud");
-      $("#engoud").fadeIn("slow");
-    }else{
-      alert("Date Of Birth is not correct");
-    }
-    if(!/^\D*$/.test(divfield6)){
-      alert("Nationality is not correct");
-    }
-    if(!/^\D*$/.test(divfield7)){
-      alert("Work is not correct");
-    }
-  });
+  console.log("ready!");
+
+$("#NaamNed").focusout(function(){
+  var name = $("#NaamNed").val();
+  if (!name.match('^[A-Za-z]')) {
+      alert("naam niet correct");
+  }
+});
+
+$("#AdresNed").focusout(function(){
+  var name = $("#AdresNed").val();
+  if (!name.focusout('^[A-Za-z]+ [0-9]*[A-Za-z]*[\s]*[0-9]+')) {
+      alert("een geldige adres invoeren");
+  }
+});
+
+$("#WoonplaatsNed").focusout(function(){
+  var name = $("#WoonplaatsNed").val();
+  if (!name.match('^[A-Za-z]*[0-9]{1}')) {
+      alert("een bestaand woonplaats kiezen");
+  }
+});
+
+$("#PostcodeNed").focusout(function(){
+  var name = $("#PostcodeNed").val();
+  if (!name.match('^[0-9]{4}[A-Za-z]{2}')) {
+    alert("een geldige postcode kiezen");
+  }
+});
+
+// $("#GeboorteNed").focusout(function(){
+//   var name = $("#GeboorteNed").val();
+//   if (!name.match('^[0-9]{5}[0-9]{5}')) {
+//     alert("FOOUUUUT!!!!");
+//   } else {
+//
+//   }
+$("#GeboorteNed").focusout(function(){
+  var name = $("#GeboorteNed").val();
+  if(/^\d{4}-\d{2}-\d{2}$/.test("#GeboorteNed")){
+    let age = getAge("#GeboorteNed");
+    $("#oud").text("Je word " + (age+=1) + " jaar oud");
+    $("#oud").fadeIn("slow");
+    $("#oud").color("black");
+  }
+})
+
+$("#NationaliteitNed").focusout(function(){
+  var name = $("#NationaliteitNed").val();
+  if (!name.match('^[A-Za-z]')) {
+      alert("nationaliteit is niet correct");
+  }
+});
+
+$("#BeroepNed").focusout(function(){
+  var name = $("#BeroepNed").val();
+  if (!name.match('^[A-Za-z]*[0-9]{0}')) {
+        alert ("een geldig beroep kiezen")
+      }
+});
+
+// engels..................................................................
+
+$("#NameEng").focusout(function(){
+  var name = $("#NameEng").val();
+  if (!name.match('^[A-Za-z]')) {
+      alert ("name not correct");
+    $('#NameEng').val("");
+}
+});
+
+$("#AdressEng").focusout(function(){
+  var name = $("#AdressEng").val();
+  if (!name.match('^[A-Za-z]+ [0-9]*[A-Za-z]*[\s]*[0-9]+')) {
+        alert ("Adress not correct");
+        $('#AdressEng').val("");
+
+}
+});
+
+$("#ResidenceEng").focusout(function(){
+  var name = $("#ResidenceEng").val();
+  if (!name.match('^[A-Za-z]*[0-9]{1}')) {
+      document.getElementById('ResidenceEng').style.backgroundColor = "white";
+  } else {
+        alert ("Residence not correct")
+}
+});
+
+$("#PostalEng").focusout(function(){
+  var name = $("#PostalEng").val();
+  if (!name.match('^[0-9]{4}[A-Za-z]{2}')) {
+      alert ("wrong postal code")
+}
+});
+
+$("#BirthEng").focusout(function(){
+  var name = $("#BirthEng").val();
+  if(/^\d{4}-\d{2}-\d{2}$/.test("#BirthEng")){
+    let age = getAge("#BirthEng");
+    $("#old").text("Je word " + (age+=1) + " jaar oud");
+    $("#old").fadeIn("slow");
+  }
+})
+
+$("#NationalityEng").focusout(function(){
+  var name = $("#NationalityEng").val();
+  if (!name.match('^[A-Za-z]')) {
+        alert ("Nationality is not correct")
+}
+});
+
+$("#ProfessionEng").onclick(function(){
+  var name = $("#ProfessionEng").val();
+  if (!name.match('^[A-Za-z]*[0-9]{0}')) {
+        alert ("profession is not correct")
+}
+});
+
+  // $("#NaamNed").keyup(function(){
+  //   var name = $("#NaamNed").val();
+  //   if (name.match('^[a-f]{2}')) {
+  //       console.log("Naam: "+name+" OK");
+  //       document.getElementById('NaamNed').style.backgroundColor = "white";
+  //   } else {
+  //     console.log("Naam: "+name+" Fout");
+  //       document.getElementById('NaamNed').style.backgroundColor = "red";
+  //   }
+  // });
 });
